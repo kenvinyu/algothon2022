@@ -1,12 +1,9 @@
 import numpy as np
 
-import experimental_strategies as es
-
 def getMyPosition (prcSoFar):
-    indxs = [2, 6, 60, 76, 91, 92, 95]
-
     if prcSoFar.shape[1] <= 1: 
         return np.zeros(prcSoFar.shape[0])
+    indxs = [2, 6, 60, 76, 91, 92, 95]
     p = prcSoFar[indxs, :]
     p_log = np.log(p)
     p_log_diff = np.diff(p_log, axis=1)
