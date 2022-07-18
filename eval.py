@@ -20,7 +20,8 @@ def loadPrices(fn):
     nt, nInst = df.values.shape
     return (df.values).T
 
-pricesFile="./prices.txt"
+# pricesFile="./prices.txt"
+pricesFile="./prc500.txt"
 prcAll = loadPrices(pricesFile)
 print ("Loaded %d instruments for %d days" % (nInst, nt))
 
